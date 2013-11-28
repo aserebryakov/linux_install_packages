@@ -1,0 +1,23 @@
+    This is noted on the release notes for Xubuntu 13.10 and is a known issue.
+
+    https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes/Xubuntu
+
+    It is this bug https://bugs.launchpad.net/ubuntu/+source/indicator-sound/+bug/1208204
+
+    You can use the workround noted in comments #5.
+
+    Edit the service file
+
+    gksudo mousepad /usr/share/dbus-1/services/indicator-sound.service
+
+    It will look like
+
+    [D-BUS Service] Name=com.canonical.indicator.sound
+    Exec=/usr/lib/x86_64-linux-gnu/indicator-sound/indicator-sound-service
+
+    Comment out the last line and enter a new one, should look like
+
+    [D-BUS Service] Name=com.canonical.indicator.sound
+    #Exec=/usr/lib/x86_64-linux-gnu/indicator-sound/indicator-sound-service
+    Exec=/usr/lib/indicator-sound-gtk2/indicator-sound-service
+

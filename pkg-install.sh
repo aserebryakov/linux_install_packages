@@ -32,6 +32,7 @@ $PKG_MANAGER $FLAGS $INSTALL vlc
 $PKG_MANAGER $FLAGS $INSTALL skype
 $PKG_MANAGER $FLAGS $INSTALL gimp
 $PKG_MANAGER $FLAGS $INSTALL gimp-ufraw
+$PKG_MANAGER $FLAGS $INSTALL libreoffice
 
 wget https://www.dropbox.com/download?dl=packages/debian/dropbox_1.6.0_amd64.deb -O dropbox.deb
 

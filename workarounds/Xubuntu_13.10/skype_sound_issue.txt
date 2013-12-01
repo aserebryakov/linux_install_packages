@@ -1,0 +1,15 @@
+skype – no sound o distorted sound
+
+Distorted sound or no sound at all in Skype can be fixed by modifying file
+
+/etc/pulse/default.pa
+
+sudo mousepad /etc/pulse/default.pa
+
+Find line with
+
+load-module module-udev-detect
+
+and change it to
+
+load-module module-udev-detect tsched=0
